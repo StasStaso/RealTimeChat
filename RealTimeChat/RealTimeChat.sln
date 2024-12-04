@@ -9,11 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{9D47EA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RealTimeChat.Server", "Server\RealTimeChat.Server\RealTimeChat.Server.csproj", "{3D6CC7E9-77AB-488E-B7E9-760C05C95887}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RealTimeChat.Client", "Client\RealTimeChat.Client\RealTimeChat.Client.csproj", "{578DBCA6-6985-4B78-B0CF-5AEE118E20E5}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{EE1FD656-850C-48AA-8EF1-5092021D2738}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealTimeChat.Shared", "RealTimeChat.Shared\RealTimeChat.Shared.csproj", "{2F07E953-FCBF-40B8-A16A-157BA5E285FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RealTimeChat.Shared", "RealTimeChat.Shared\RealTimeChat.Shared.csproj", "{2F07E953-FCBF-40B8-A16A-157BA5E285FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealTimeChat.Client", "Client\RealTimeChat.Client\RealTimeChat.Client.csproj", "{78041FCE-4F12-4527-9B53-C68710600620}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,22 +25,22 @@ Global
 		{3D6CC7E9-77AB-488E-B7E9-760C05C95887}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D6CC7E9-77AB-488E-B7E9-760C05C95887}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D6CC7E9-77AB-488E-B7E9-760C05C95887}.Release|Any CPU.Build.0 = Release|Any CPU
-		{578DBCA6-6985-4B78-B0CF-5AEE118E20E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{578DBCA6-6985-4B78-B0CF-5AEE118E20E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{578DBCA6-6985-4B78-B0CF-5AEE118E20E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{578DBCA6-6985-4B78-B0CF-5AEE118E20E5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2F07E953-FCBF-40B8-A16A-157BA5E285FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2F07E953-FCBF-40B8-A16A-157BA5E285FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F07E953-FCBF-40B8-A16A-157BA5E285FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F07E953-FCBF-40B8-A16A-157BA5E285FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78041FCE-4F12-4527-9B53-C68710600620}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78041FCE-4F12-4527-9B53-C68710600620}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78041FCE-4F12-4527-9B53-C68710600620}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78041FCE-4F12-4527-9B53-C68710600620}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3D6CC7E9-77AB-488E-B7E9-760C05C95887} = {9D47EA96-E514-400E-849B-6C2AECCE34DE}
-		{578DBCA6-6985-4B78-B0CF-5AEE118E20E5} = {01E1BD60-8048-4842-9C53-58D0107CC110}
 		{2F07E953-FCBF-40B8-A16A-157BA5E285FE} = {EE1FD656-850C-48AA-8EF1-5092021D2738}
+		{78041FCE-4F12-4527-9B53-C68710600620} = {01E1BD60-8048-4842-9C53-58D0107CC110}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E23A7614-7F27-475E-86C1-A9D5CB466C1A}
