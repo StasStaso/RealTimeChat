@@ -1,9 +1,37 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using RealTimeChat.Server;
 using RealTimeChat.Server.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+}).AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = TokenService.GetTokenValidationParameters(builder.Configuration);
+
+    options.Events = new JwtBearerEvents
+    {
+        OnMessageReceived = (context) =>
+        {
+            if (context.Request.Path.StartsWithSegments("/hubs/realtimechat"))
+            {
+                var jwt = context.Request.Query["access_token"];
+                if (!string.IsNullOrWhiteSpace(jwt))
+                {
+                    context.Token = jwt;
+                }
+            }
+            return Task.CompletedTask;
+        }
+    };
+});
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
