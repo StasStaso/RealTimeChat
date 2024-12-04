@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
 namespace RealTimeChat.Server.Controllers
 {
+    [Authorize]
     public abstract class BaseController : ControllerBase
     {
         private int _userId;
