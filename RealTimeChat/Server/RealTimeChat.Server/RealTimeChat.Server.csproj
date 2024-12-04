@@ -15,4 +15,13 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Client\RealTimeChat.Client\RealTimeChat.Client.csproj" />
+    <ProjectReference Include="..\..\RealTimeChat.Shared\RealTimeChat.Shared.csproj" />
+  </ItemGroup>
+
 </Project>
