@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using RealTimeChat.Server.Data;
 
 var builder = WebApplication.CreateBuilder(args);
