@@ -14,7 +14,7 @@
         <div class="card-header bg-main br-0 text-white">
             <div class="row">
                 <div class="col">
-                    <h2>BlazingChat</h2>
+                    <h2>RealTimeChat</h2>
                 </div>
                 <div class="col">
                     <button type="button" class="btn btn-warning float-end" @onclick="HandleLogout">Logout</button>
@@ -99,7 +99,7 @@
                     Chats = chatsList;
                 }
                 _loadingUsers = false;
-                await _hubConnection.SendAsync(nameof(IBlazingChatHubServer.SetUserOnline), AuthenticationState.User);
+                await _hubConnection.SendAsync(nameof(IRealTimeChatServer.SetUserOnline), AuthenticationState.User);
                 StateHasChanged();
             }
         }
@@ -153,17 +153,17 @@
     private HubConnection ConfigureHubConnection()
     {
         var hubConnection = new HubConnectionBuilder()
-                            .WithUrl(NavigationManager.ToAbsoluteUri("/hubs/blazing-chat"),
+                            .WithUrl(NavigationManager.ToAbsoluteUri("/hubs/realtimechat"),
                                options => options.AccessTokenProvider = () => Task.FromResult(AuthenticationState.Token))
                             .Build();
 
-        hubConnection.On<UserDto>(nameof(IBlazingChatHubClient.UserConnected), (newUser) =>
+        hubConnection.On<UserDto>(nameof(IRealTimeChatClient.UserConnected), (newUser) =>
         {
             Users.Add(newUser);
             StateHasChanged();
         });
 
-        hubConnection.On<ICollection<UserDto>>(nameof(IBlazingChatHubClient.OnlineUsersList), (onlineUsers) =>
+        hubConnection.On<ICollection<UserDto>>(nameof(IRealTimeChatClient.OnlineUsersList), (onlineUsers) =>
         {
             foreach (var user in Users)
             {
@@ -175,7 +175,7 @@
             StateHasChanged();
         });
 
-        hubConnection.On<int>(nameof(IBlazingChatHubClient.UserIsOnline), (userId) =>
+        hubConnection.On<int>(nameof(IRealTimeChatClient.UserIsOnline), (userId) =>
         {
             var user = Users.FirstOrDefault(u => u.Id == userId);
             if (user is not null)
@@ -185,7 +185,7 @@
             }
         });
 
-        hubConnection.On<MessageDto>(nameof(IBlazingChatHubClient.MessageRecieved), (messageDto) =>
+        hubConnection.On<MessageDto>(nameof(IRealTimeChatClient.MessageRecieved), (messageDto) =>
         {
             var fromUser = Users.FirstOrDefault(u => u.Id == messageDto.FromUserId);
 
