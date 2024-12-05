@@ -1,5 +1,4 @@
-﻿
-const storage = window.localStorage;
+﻿const storage = window.localStorage;
 
 window.getFromStorage = (key) => storage.getItem(key);
 

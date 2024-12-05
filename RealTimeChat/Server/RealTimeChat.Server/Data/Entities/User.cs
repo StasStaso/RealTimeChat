@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RealTimeChat.Server.Data.Entities
@@ -9,12 +10,12 @@ namespace RealTimeChat.Server.Data.Entities
         [Key]
         public int Id { get; set; }
 
-        [Required, MaxLength(25)]
+        [Required, Unicode(false), MaxLength(25)]
         public string Name { get; set; }
 
         public DateTime AddedOn { get; set; }
 
-        [Required, MaxLength(50)]
+        [Required, Unicode(false), MaxLength(50)]
         public string Username { get; set; }
 
         [Required, MaxLength(20)]
