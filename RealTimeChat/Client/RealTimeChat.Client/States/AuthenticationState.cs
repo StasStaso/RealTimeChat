@@ -8,6 +8,11 @@ namespace RealTimeChat.Client.States
         public const string AuthStoreKey = "authkey";
 
         public event PropertyChangedEventHandler? PropertyChanged;
+<<<<<<< HEAD
+=======
+        //public int Id { get; set; }
+        //public string? Name { get; set; }
+>>>>>>> c68e2b7383ae1dac731848f80a56337d0a43807a
         public UserDto User { get; set; } = default;
         public string? Token { get; set; }
 
