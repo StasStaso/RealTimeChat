@@ -9,6 +9,8 @@ using RealTimeChat.Shared.DTOs;
 
 namespace RealTimeChat.Server.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class MessagesController : BaseController
     {
         private readonly ApplicationDbContext _chatContext;
