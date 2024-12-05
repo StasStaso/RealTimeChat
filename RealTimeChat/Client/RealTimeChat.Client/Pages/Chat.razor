@@ -82,8 +82,8 @@
                 _hubConnection = ConfigureHubConnection();
 
                 _loadingUsers = true;
-                var userListTask = GetClient().GetFromJsonAsync<ICollection<UserDto>>("api/users", JsonConverter.JsonSerializerOptions);
-                var chatListTask = GetClient().GetFromJsonAsync<IList<UserDto>>("api/users/chats", JsonConverter.JsonSerializerOptions);
+                var userListTask = GetClient().GetFromJsonAsync<ICollection<UserDto>>("api/user", JsonConverter.JsonSerializerOptions);
+                var chatListTask = GetClient().GetFromJsonAsync<IList<UserDto>>("api/user/chats", JsonConverter.JsonSerializerOptions);
 
                 await _hubConnection.StartAsync();
 
