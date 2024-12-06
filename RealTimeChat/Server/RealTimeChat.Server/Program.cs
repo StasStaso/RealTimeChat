@@ -1,3 +1,4 @@
+using Azure.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using RealTimeChat.Server;
@@ -35,7 +36,8 @@ builder.Services.AddAuthentication(options =>
 });
 
 builder.Services.AddScoped<TokenService>();
-builder.Configuration.AddUserSecrets<Program>();
+
+
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
