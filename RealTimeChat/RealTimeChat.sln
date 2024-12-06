@@ -13,7 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{EE1FD6
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RealTimeChat.Shared", "RealTimeChat.Shared\RealTimeChat.Shared.csproj", "{2F07E953-FCBF-40B8-A16A-157BA5E285FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealTimeChat.Client", "Client\RealTimeChat.Client\RealTimeChat.Client.csproj", "{78041FCE-4F12-4527-9B53-C68710600620}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RealTimeChat.Client", "Client\RealTimeChat.Client\RealTimeChat.Client.csproj", "{78041FCE-4F12-4527-9B53-C68710600620}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{08EE331C-AC73-45D0-B11B-5E08ED713CE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{78041FCE-4F12-4527-9B53-C68710600620}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78041FCE-4F12-4527-9B53-C68710600620}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78041FCE-4F12-4527-9B53-C68710600620}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08EE331C-AC73-45D0-B11B-5E08ED713CE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08EE331C-AC73-45D0-B11B-5E08ED713CE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08EE331C-AC73-45D0-B11B-5E08ED713CE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08EE331C-AC73-45D0-B11B-5E08ED713CE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

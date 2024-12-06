@@ -1,0 +1,6 @@
+services:
+  realtimechat.server:
+    image: ${DOCKER_REGISTRY-}realtimechatserver
+    build:
+      context: .
+      dockerfile: Server/RealTimeChat.Server/Dockerfile
